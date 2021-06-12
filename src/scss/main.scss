@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import "variables";
+@import "functions";
+
+html {
+	& > body {
+		$primary-color: color("primary");
+
+		&.to-be-removed-by-purgecss {
+			font-size: 2rem;
+		}
+
+		form {
+			padding: .5rem;
+		}
+
+		*::placeholder {
+			color: $primary-color;
+		}
+
+		button {
+			$padding: 3px;
+
+			background-color: $primary-color;
+			color: color("light");
+			border: none;
+			padding: $padding $padding * 2;
+		}
+	}
+}
